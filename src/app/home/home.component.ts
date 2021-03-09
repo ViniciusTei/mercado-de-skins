@@ -11,7 +11,8 @@ export class HomeComponent implements OnInit {
   constructor(private SkinsService: SkinsService) { }
 
   ngOnInit(): void {
-    
+    console.log(this.SkinsService.getAll())
+      
   }
 
 }
