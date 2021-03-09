@@ -1,11 +1,11 @@
 <div class="banner">
     <div class="btn">
-        <button> < </button>
+        <button (click)="click(-1)"> < </button>
     </div>
     <div class="image">
-        <img src="{{images[0]}}" alt="banner">
+        <img src="{{images[index]}}" alt="banner">
     </div>
     <div class="btn">
-        <button>></button>
+        <button (click)="click(1)">></button>
     </div>
 </div>

@@ -8,9 +8,20 @@
 .btn {
     display: flex;
     align-items: center;
+    padding: 10px;
 }
 
 img {
     height: 250px;
     width: 960px;
+}
+
+button {
+    height: 48px;
+    background-color: #fff;
+    border: none;
+    color: blue;
+
+    font-size: 18px;
+    font-weight: 500;
 }

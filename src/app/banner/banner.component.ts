@@ -8,13 +8,24 @@ import { Component, OnInit } from '@angular/core';
 export class BannerComponent implements OnInit {
   
   public images = [
-    '../../assets/images/banner1.jpg',
-    '../../assets/images/banner2.jpg',
-    '../../assets/images/banner3.jpg'
+    'https://i.imgur.com/cWlm9Aq.jpg',
+    'https://i.imgur.com/tDBn9nB.jpg',
   ]
+
+  public index = 0
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  click(ev: number) {
+    this.index += ev
+    
+    if(this.index == this.images.length ) {
+      this.index = 0
+    } else if(this.index < 0) {
+      this.index = this.images.length -1
+    } 
   }
 
 }
