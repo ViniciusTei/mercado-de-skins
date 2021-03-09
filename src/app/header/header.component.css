@@ -1,38 +1,38 @@
 header {
+    background-color: #ffde59;
     height: 145px;
     width: 100%;
-    background-color: #ffde59;
 }
 
 .wrapper {
-    height: 100%;
-    max-width: 960px;
     display: flex;
+    max-width: 960px;
     margin: 0 auto;
+    height: 100%;
 }
 
 .content {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width: 100%;
 }
 
 .search-bar {
-    margin-bottom: 5px;
     align-self: flex-end;
-    
     display: flex;
+    margin-bottom: 5px; 
 }
 
 .buscar{
+    border: none;
+    border-radius: 5px 0 0 5px;
     height: 35px;
     width: 500px;
-    border: none;
 }
 .btn {
-    height: 37px;
     border: none;
+    height: 37px;
 }
 
 nav {
@@ -40,8 +40,8 @@ nav {
 }
 
 .nav-btn {
-    padding: 10px;
     color: rgba(51,51,51,.6);
+    padding: 10px;
     text-decoration: none;
 }
 
@@ -51,4 +51,14 @@ a,img {
 
 .lupa{
     height: 25px;
+}
+
+.shop {
+    height: 100%;
+    display: flex; 
+    align-items: flex-start;
+}
+
+.material-icons {
+    color: #040303;
 }
