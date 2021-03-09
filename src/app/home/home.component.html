@@ -1,2 +1,23 @@
+
 <app-header></app-header>
 <app-banner></app-banner>
+<div class="content">
+    <div class="cabecalho">
+        <h3>Todos os produtos</h3>
+        <span class="material-icons">
+            sort
+        </span>
+    </div>
+    <div class="card" *ngFor="let prod of all">
+        <img src="{{prod.image}}" alt="">
+        <div class="info">
+            <div class="name">
+                {{prod.name}}
+            </div>
+            <div class="value">
+                {{prod.value | currency}} 12x sem juros
+            </div>
+            
+        </div>
+    </div>
+</div>

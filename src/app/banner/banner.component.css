@@ -1,8 +1,8 @@
 .banner {
     width: 100%;
     display: flex;
-    justify-content: center;
-    height: 250px;
+    justify-content: space-around;
+    height: 338px;
 }
 
 .btn {
@@ -11,9 +11,25 @@
     padding: 10px;
 }
 
-img {
-    height: 250px;
-    width: 960px;
+img{
+    height: 338px;
+    max-width: 960px;
+
+    
+}
+
+.image {
+    -webkit-transition: margin-left 500ms ease-in;
+    -moz-transition: margin-left 500ms ease-in;
+    -o-transition: margin-left 500ms ease-in;
+    transition: margin-left 500ms ease-in;
+
+    
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
 }
 
 button {
@@ -24,4 +40,8 @@ button {
 
     font-size: 18px;
     font-weight: 500;
+}
+
+.check {
+    border-radius: 50%;
 }

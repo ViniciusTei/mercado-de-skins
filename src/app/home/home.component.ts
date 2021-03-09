@@ -8,10 +8,12 @@ import { SkinsService } from '../services/skins.service';
 })
 export class HomeComponent implements OnInit {
 
+  public all: any[] = new Array<any>();
+
   constructor(private SkinsService: SkinsService) { }
 
   ngOnInit(): void {
-    console.log(this.SkinsService.getAll())
+    this.all = this.SkinsService.getAll()
       
   }
 

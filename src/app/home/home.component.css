@@ -1,0 +1,39 @@
+.content {
+    padding: 35px;
+    
+}
+
+.cabecalho {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+span:active {
+    background-color: #e7e7e7;
+}
+
+.card {
+    max-width: 300px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 38px auto;
+}
+
+img {
+    padding: 15px;
+}
+
+.name {
+    font-size: 15px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.value {
+    padding: 5px;
+    color: #00A650;
+}
