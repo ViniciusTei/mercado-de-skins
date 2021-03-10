@@ -8,7 +8,7 @@
             sort
         </span>
     </div>
-    <div class="card" *ngFor="let prod of all">
+    <div class="card" *ngFor="let prod of all" [routerLink]="['/detalhes', prod.id]"  routerLinkActive="detalhes">
         <img src="{{prod.image}}" alt="">
         <div class="info">
             <div class="name">

@@ -1,9 +1,14 @@
 .content {
     padding: 35px;
-    
+    display: grid;
+    grid-template-areas: 
+        'header header header'
+        'item item item';
+    grid-column-gap: 1I5px;
 }
 
 .cabecalho {
+    grid-area: header;
     background-color: #fff;
     display: flex;
     justify-content: space-around;
@@ -20,11 +25,12 @@ span:active {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    margin: 38px auto;
+    margin: 15px auto;
+    cursor: pointer;
 }
 
 img {
-    padding: 15px;
+    padding: 25px;
 }
 
 .name {
@@ -35,5 +41,12 @@ img {
 
 .value {
     padding: 5px;
+    font-size: 14px;
     color: #00A650;
+    margin-bottom: 15px;
 }
+
+.material-icons {
+    cursor: pointer;
+}
+
