@@ -2,11 +2,8 @@
     <div class="btn">
         <button (click)="click(-1)"> < </button>
     </div>
-    <div class="image">
-        <img src="{{images[index]}}" alt="banner">
-        <div class="inputs">
-            <input *ngFor="let item of images; index as i" class="check" type="checkbox" name="image" id="{{i}}">
-        </div>
+    <div *ngFor="let img of images" class="image">
+        <img src="{{img}}" alt="banner">
     </div>
     <div class="btn">
         <button (click)="click(1)">></button>

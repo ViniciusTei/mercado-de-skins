@@ -1,14 +1,18 @@
 header {
     background-color: #ffde59;
-    height: 145px;
+    height: auto;
     width: 100%;
 }
 
 .wrapper {
-    display: flex;
+    display: grid;
+    grid-template-areas: 
+        "logo search menu"
+    ;
+    align-items: center;
     max-width: 960px;
-    margin: 0 auto;
     height: 100%;
+    margin: 0 auto;
 }
 
 .content {
@@ -22,31 +26,27 @@ header {
     align-self: flex-end;
     display: flex;
     margin-bottom: 5px; 
+    grid-area: search;
 }
 
 .buscar{
     border: none;
     border-radius: 5px 0 0 5px;
     height: 35px;
-    width: 500px;
 }
+
 .btn {
     border: none;
     height: 37px;
+    border-radius: 0 5px 5px 0;
 }
 
 nav {
-    align-self: flex-end;
-}
-
-.nav-btn {
-    color: rgba(51,51,51,.6);
-    padding: 10px;
-    text-decoration: none;
+    display: none;
 }
 
 a,img {
-    height: 100%;
+    width: 100%;
 }
 
 .lupa{
@@ -54,11 +54,53 @@ a,img {
 }
 
 .shop {
-    height: 100%;
-    display: flex; 
-    align-items: flex-start;
+    margin: 8px;
+    padding-top: 8px;
 }
 
 .material-icons {
     color: #040303;
+}
+
+.menu {
+    grid-area: menu;
+    margin: 9px;
+}
+
+/*Desktop*/
+@media screen and (min-width: 1024px) and (max-width: 1600px)  {
+    nav {
+        display: block;
+        align-self: flex-end;
+        margin-bottom: 4px;
+    }
+    
+    .nav-btn {
+        color: rgba(51,51,51,.6);
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    a,img {
+        width: 65%;
+    }
+
+    .buscar{
+        width: 500px;
+    }
+
+    .search-bar {
+        margin: 9px;
+    }
+} 
+
+/*Tablet*/
+@media screen and (min-width: 768px) and (max-width: 1023px)  {
+    a,img {
+        width: 65%;
+    }
 }

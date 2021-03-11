@@ -1,8 +1,9 @@
 .banner {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: space-around;
     height: 338px;
+    overflow-x: hidden;
 }
 
 .btn {
@@ -19,11 +20,7 @@ img{
 }
 
 .image {
-    -webkit-transition: margin-left 500ms ease-in;
-    -moz-transition: margin-left 500ms ease-in;
-    -o-transition: margin-left 500ms ease-in;
-    transition: margin-left 500ms ease-in;
-
+    width: 100%;
     
 }
 
