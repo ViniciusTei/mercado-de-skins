@@ -14,14 +14,32 @@
 
 img{
     height: 338px;
-    max-width: 960px;
+    width: 100%;
 
     
 }
 
 .image {
     width: 100%;
-    
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.move {
+    -webkit-transform: translate(100px, 0);
+    transform: translate(100px, 0);
+    transition: 1000ms;
+}
+
+.move-back {
+    -webkit-transform: translate(-100px, 0);
+    transform: translate(-100px, 0);
+}
+
+.move-center {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    transition: 1000ms;
 }
 
 .inputs {
