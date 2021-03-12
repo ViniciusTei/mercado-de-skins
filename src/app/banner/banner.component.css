@@ -19,10 +19,16 @@ img{
     
 }
 
-.image {
+.slide-image {
     width: 100%;
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
+    position: relative;
+}
+
+.image {
+    -webkit-transform: translate(-100px, 0);
+    transform: translate(-100px, 0);
 }
 
 .move {

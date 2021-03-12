@@ -2,8 +2,13 @@
     <div class="btn">
         <button (click)="click(-1)"> < </button>
     </div>
-    <div id="img" class="image">
-        <img src="{{images[index]}}" alt="banner">
+    <div id="img" class="slide-image">
+        <img *ngFor="let img of images; index as i" 
+                class="image" 
+                src="{{img}}" 
+                [ngStyle]="{'display': this.index == i ? 'block' : 'none'}"
+                [ngClass]="{'move-center': this.index == i ? true : false}"
+                alt="banner">
     </div>
     <div class="btn">
         <button (click)="click(1)">></button>

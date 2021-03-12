@@ -20,23 +20,13 @@ export class BannerComponent implements OnInit {
   }
 
   click(ev: number) {
-    if(ev > 0) {
-      document.getElementById('img')?.classList.add('move')
-    } 
-    setTimeout(() => {
-      this.index += ev
-      document.getElementById('img')?.classList.remove('move')
-      document.getElementById('img')?.classList.add('move-back')
-      if(this.index == this.images.length ) {
-        this.index = 0
-      } else if(this.index < 0) {
-        this.index = this.images.length -1
-      }
-
-      document.getElementById('img')?.classList.remove('move-back')
-      document.getElementById('img')?.classList.add('move-center')
-    }, 1000)
-
+    let slides = document.getElementsByClassName('image')
+    this.index += ev
+    if(this.index == this.images.length ) {
+      this.index = 0
+    } else if(this.index < 0) {
+      this.index = this.images.length -1
+    }
     
   }
 

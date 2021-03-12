@@ -103,4 +103,8 @@ a,img {
     a,img {
         width: 65%;
     }
+
+    .buscar{
+        width: 300px;
+    }
 }
