@@ -9,7 +9,10 @@ import { ActivatedRoute } from '@angular/router';
 export class DetalhesComponent implements OnInit {
 
   constructor(private ActivatedRoute: ActivatedRoute) {
-  }
+    ActivatedRoute.params.subscribe(val => {
+      console.log(val)
+    })
+  } 
   
   ngOnInit(): void {
     console.log('init')

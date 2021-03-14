@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.all = this.SkinsService.getAll()
-      
+    console.log('home')
   }
 
 
