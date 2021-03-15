@@ -2,9 +2,9 @@ name: Build Angular App to gh-pages
 
 on:
   push:
-    branches: [ gh-pages ]
+    branches: [ master ]
   pull_request:
-    branches: [ gh-pages ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -17,14 +17,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - name: Angular build and deploy
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions
       with:
-        node-version: ${{ matrix.node-version }}
-      #install the dependencies of the project
-    - run: npm install 
-      #install the angular cli needed for building the project
-    - run: npm install -g @angular/cli 
-      #run the build script with the docs foldes as dest
-    - run: npm run build 
+        github_access_token: ${{ secrets.KEY }} # see the Configuration section for how you can create secrets
+        build_configuration: production # The build environment for the app. please look configurations in your angular.json
+        base_href: /mercado-de-skins/   # make sure this corresponds to https://<your_username>.github.io/<base_href>/
+        deploy_branch: gh-pages # The branch the action should deploy to.
+        angular_dist_build_folder: docs # The folder where your project is supposed to be after running ng build by the action.
