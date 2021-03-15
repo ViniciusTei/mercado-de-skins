@@ -68,7 +68,7 @@ a,img {
 }
 
 /*Desktop*/
-@media screen and (min-width: 1024px) and (max-width: 1600px)  {
+@media screen and (min-width: 1024px) {
     nav {
         display: block;
         align-self: flex-end;

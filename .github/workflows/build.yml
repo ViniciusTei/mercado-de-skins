@@ -28,6 +28,7 @@ jobs:
     - run: npm install -g @angular/cli 
       #run the build script with the docs foldes as dest
     - run: npm run build 
+      #run the deploy action 
     - name: Deploy to GitHub Pages
       uses: crazy-max/ghaction-github-pages@v2
       with:
