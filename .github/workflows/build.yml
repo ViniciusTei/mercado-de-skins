@@ -1,7 +1,4 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: Node.js CI
+name: Build Angular App to gh-pages
 
 on:
   push:
@@ -25,15 +22,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+      #install the dependencies of the project
     - run: npm install 
+      #install the angular cli needed for building the project
     - run: npm install -g @angular/cli 
+      #run the build script with the docs foldes as dest
     - run: npm run build 
-  #Job to deploy the app to github pages
-  deploy:
-    - name: GitHub Pages
-      # You may pin to the exact commit or the version.
-      # uses: crazy-max/ghaction-github-pages@1510b11c0c2f843eafb8ff41b3da8c467c8d4a9f
-      uses: crazy-max/ghaction-github-pages@v2.2.0
-      with:
-        # Build directory to deploy
-        build_dir: docs
