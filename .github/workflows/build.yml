@@ -2,9 +2,9 @@ name: Build Angular App to gh-pages
 
 on:
   push:
-    branches: [ gh-pages ]
+    branches: [ master ]
   pull_request:
-    branches: [ gh-pages ]
+    branches: [ master ]
 
 jobs:
   build and deploy:
