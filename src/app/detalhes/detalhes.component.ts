@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { partitionArray } from '@angular/compiler/src/util';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { SkinsService } from '../services/skins.service';
 
 @Component({
   selector: 'app-detalhes',
@@ -8,14 +10,20 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetalhesComponent implements OnInit {
 
-  constructor(private ActivatedRoute: ActivatedRoute) {
-    ActivatedRoute.params.subscribe(val => {
-      console.log(val)
-    })
-  } 
+  public produto: any;
+  public porcentagemFloat: string = ''; //es
+
+  constructor(private ActivatedRoute: ActivatedRoute,
+              private ProdutoService: SkinsService) {} 
   
   ngOnInit(): void {
-    console.log('init')
+    this.ActivatedRoute.params
+      .subscribe((params) => {
+        let id = Number(params.id)
+        this.produto = this.ProdutoService.getById(id)
+        let float = this.produto.floatValue * 100;
+        this.porcentagemFloat = String(float.toFixed(0)) + '%';
+      })
     
   }
 

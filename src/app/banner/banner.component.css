@@ -55,9 +55,9 @@ img{
 
 button {
     height: 48px;
-    background-color: #fff;
+    background-color: var(--clr-white);
     border: none;
-    color: blue;
+    color: var(--clr-blue);
 
     font-size: 18px;
     font-weight: 500;

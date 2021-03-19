@@ -1,5 +1,5 @@
 header {
-    background-color: #ffde59;
+    background-color: var(--clr-yellow);
     height: auto;
     width: 100%;
 }
@@ -59,7 +59,7 @@ a,img {
 }
 
 .material-icons {
-    color: #040303;
+    color: var(--clr-black);
 }
 
 .menu {
@@ -76,7 +76,7 @@ a,img {
     }
     
     .nav-btn {
-        color: rgba(51,51,51,.6);
+        color: var(--clr-grey);
         padding: 10px;
         text-decoration: none;
     }

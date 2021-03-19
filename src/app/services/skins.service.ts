@@ -84,4 +84,8 @@ export class SkinsService {
   getAll() {
     return this.products
   }
+
+  getById(id: number) {
+    return this.products[id]
+  }
 }
