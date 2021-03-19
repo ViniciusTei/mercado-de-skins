@@ -1,2 +1,23 @@
 <app-header></app-header>
-<p>detalhes works!</p>
+<main>
+    <div class="container">
+        <!-- Fazer um displayzin com varias imagens -->
+        <img src="{{produto.image}}" alt="produto-image">
+        <div class="description">
+            <h1>{{produto.name}}</h1>
+            <div class="float-value">
+                <div class="fn"></div>
+                <div class="mw"></div>
+                <div class="ft"></div>
+                <div class="ww"></div>
+                <div class="bs"></div>
+                <svg width="10" height="21" viewBox="0 0 15 21" class="arrow" [ngStyle]="{'left': porcentagemFloat}"><path d="M4.5 7.115V2a2 2 0 012-2h7a2 2 0 012 2v5.115a2 2 0 01-.655 1.48L10 13 5.155 8.595a2 2 0 01-.655-1.48z"></path><defs><filter id="float-arrow_svg__filter0_d" x="0.5" y="0" width="19" height="21" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></feColorMatrix><feOffset dy="4"></feOffset><feGaussianBlur stdDeviation="2"></feGaussianBlur><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"></feColorMatrix><feBlend in2="BackgroundImageFix" result="effect1_dropShadow"></feBlend><feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feBlend></filter></defs></svg>
+            </div>
+            <label>Float: {{produto.floatValue}}</label>
+            <div class="value">
+                {{produto.value | currency}}
+            </div>
+            <button>Adiconar ao carrinho</button>
+        </div>
+    </div>
+</main>
