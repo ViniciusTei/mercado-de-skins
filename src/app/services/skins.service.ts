@@ -88,4 +88,19 @@ export class SkinsService {
   getById(id: number) {
     return this.products[id]
   }
+  
+  getByName(name: string) {
+    let map = this.products.map(el => {
+      return el.name.toUpperCase().includes(name.toUpperCase())
+    })
+    let newProducts: any = []
+    
+    map.forEach((element, i) => {
+      if(element) {
+        newProducts.push(this.products[i])
+      }
+    })
+    
+    return newProducts;
+  }
 }

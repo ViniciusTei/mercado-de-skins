@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { SkinsService } from '../services/skins.service';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  public logo = 'https://i.imgur.com/f46YzcR.png'
+  @ViewChild('buscar') searchInput: any;
 
-  constructor() { }
+  public logo = 'https://i.imgur.com/f46YzcR.png';
+  public produtosBuscados: any[] = new Array();
+
+  constructor(private SkinService: SkinsService,
+              private Router: Router) { }
 
   ngOnInit(): void {
+    this.produtosBuscados = this.SkinService.getAll()
   }
 
+  public buscarItem() {
+    let strItem = this.searchInput.nativeElement.value
+    this.produtosBuscados.filter((x,i) =>{
+      if(x.name === strItem) {
+        this.Router.navigate(['/detalhes/' + i])
+      }
+    })
+    
+  }
 }
