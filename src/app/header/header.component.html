@@ -4,14 +4,18 @@
             <img src="{{logo}}" alt="Logo">
         </a>
         <div class="content">
-            <form class="search-bar" action="">
-                <input class="buscar" type="text" placeholder="Buscar item">
-                <button class="btn">
+            <div class="search-bar">
+                <input #buscar class="buscar" type="text" placeholder="Buscar item" list="produts">
+                <datalist id="produts">
+                    <option *ngFor="let item of produtosBuscados" [value]="item.name" (click)="buscarItem()">{{item.name}}</option>
+                </datalist>   
+                
+                <button (click)="buscarItem()" class="btn-buscar">
                     <span class="material-icons">
                         search
                     </span>
                 </button>
-            </form>
+            </div>
             <nav class="categories">
                 <a class="nav-btn" href="">Pistols</a>
                 <a class="nav-btn" href="">Rifles</a>

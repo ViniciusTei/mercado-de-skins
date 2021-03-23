@@ -35,10 +35,18 @@ header {
     height: 35px;
 }
 
-.btn {
+.buscar:focus {
+    outline: none;
+}
+
+.btn-buscar {
     border: none;
     height: 37px;
     border-radius: 0 5px 5px 0;
+}
+
+.btn-buscar:focus {
+    background-color: grey;
 }
 
 nav {
@@ -56,16 +64,28 @@ a,img {
 .shop {
     margin: 8px;
     padding-top: 8px;
+    color: var(--clr-grey) !important;
+    font-size: 1.3rem;
 }
 
 .material-icons {
     color: var(--clr-black);
+    cursor: pointer;
 }
 
 .menu {
     grid-area: menu;
-    margin: 9px;
+    margin: .5rem;
+    width: auto;
 }
+
+button:focus{
+    outline: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
+  }
 
 /*Desktop*/
 @media screen and (min-width: 1024px) {
