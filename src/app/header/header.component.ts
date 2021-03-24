@@ -18,7 +18,12 @@ export class HeaderComponent implements OnInit {
               private Router: Router) { }
 
   ngOnInit(): void {
-    this.produtosBuscados = this.SkinService.getAll()
+    this.SkinService.getAll()
+      .subscribe(
+        res => {
+          this.produtosBuscados = res
+        }
+      )
   }
 
   public buscarItem() {

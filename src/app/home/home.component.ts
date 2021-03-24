@@ -15,8 +15,13 @@ export class HomeComponent implements OnInit {
               private Router: Router) { }
 
   ngOnInit(): void {
-    this.all = this.SkinsService.getAll()
-    console.log('home')
+    this.SkinsService.getAll()
+    .subscribe(
+      res => {
+        this.all = res
+      }
+    )
+    console.log(this.all)
   }
 
 
